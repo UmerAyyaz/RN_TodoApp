@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">302448787211-47vtpjhmq78hh88d43vmjmabct8dn34l.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">302448787211</string>
+    <string name="google_api_key" translatable="false">AIzaSyA4qhdepEuuDN24LjoyW07HjVFB-4Dt2oE</string>
+    <string name="google_app_id" translatable="false">1:302448787211:android:6e120b7a5ab2d2893c2c0e</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyA4qhdepEuuDN24LjoyW07HjVFB-4Dt2oE</string>
+    <string name="google_storage_bucket" translatable="false">todoapp-aa9cb.appspot.com</string>
+    <string name="project_id" translatable="false">todoapp-aa9cb</string>
+</resources>
