@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\react clone 2\\TodoApp\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-si\\values-si.xml",
+            "outputFile": "E:\\react clone 2\\RN-TodoApp\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-si\\values-si.xml",
             "map": [
                 {
                     "source": "C:\\Users\\UMER AYYAZ\\.gradle\\caches\\transforms-3\\4916ac5b76716ffc0958ee8e642cb56d\\transformed\\jetified-play-services-basement-18.0.0\\res\\values-si\\values.xml",

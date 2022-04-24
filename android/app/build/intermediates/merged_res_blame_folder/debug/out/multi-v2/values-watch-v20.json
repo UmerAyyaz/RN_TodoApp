@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\react clone 2\\TodoApp\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
+            "outputFile": "E:\\react clone 2\\RN-TodoApp\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
             "map": [
                 {
                     "source": "C:\\Users\\UMER AYYAZ\\.gradle\\caches\\transforms-3\\cc5470ebe82211de7758a05b1672454c\\transformed\\jetified-play-services-auth-20.1.0\\res\\values-watch-v20\\values.xml",
