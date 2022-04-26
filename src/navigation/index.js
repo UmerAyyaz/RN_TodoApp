@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
+import {
+  GoogleSignin,
+  GoogleSigninButton,
+  statusCodes,
+} from '@react-native-google-signin/google-signin';
 
 
 // import navigators
@@ -21,6 +26,10 @@ export default AppContainer = () => {
   }
 
   useEffect(() => {
+    GoogleSignin.configure({
+      webClientId: '302448787211-47vtpjhmq78hh88d43vmjmabct8dn34l.apps.googleusercontent.com',
+    });
+
     const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
     return subscriber; // unsubscribe on unmount
   }, []);

@@ -50,17 +50,17 @@ const Login = ({ navigation }) => {
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={[styles.touchableStyle,{top:47,backgroundColor:'#E74C3C'}]}
-                    onPress={() => Auth.signIn(email, password)}>
+                    onPress={() => Auth.googleLogin()}>
                     <Text style={[styles.signInButton]}> SignIn with Google</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={[styles.touchableStyle,{top:50,}]}
-                    onPress={() => Auth.signIn(email, password)}>
+                    onPress={() => Auth.facebookSignIn()}>
                     <Text style={[styles.signInButton]}>SignIn with Facebook</Text>
                 </TouchableOpacity>
                 <Text style={styles.before}>Don't have an account?</Text>
                 <TouchableOpacity
-                    style={{
+                    style={{top:'6.3%',left:24
                     }}
                     onPress={() => navigation.navigate("SignUp")}>
                     <Text style={styles.signUp}>Sign Up</Text>

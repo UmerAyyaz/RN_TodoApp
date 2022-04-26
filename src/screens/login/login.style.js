@@ -54,7 +54,7 @@ const styles = StyleSheet.create(
 
         },
         signUp: {
-            color: 'blue', top: '170%', left: '57%', fontSize: 15, fontWeight: '800'
+            color: 'blue', left: '57%', fontSize: 15, fontWeight: '800'
         },
         signInButton: {
             fontSize: 18, color: 'black', fontWeight: 'bold'
