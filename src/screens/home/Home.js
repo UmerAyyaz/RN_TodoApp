@@ -7,11 +7,13 @@ import {
     ImageBackground,
     TouchableOpacity,
     FlatList,
-    SafeAreaView
+    SafeAreaView,
+    ActivityIndicator
 } from 'react-native';
 import { Card } from 'react-native-paper';
 import styles from './home.style';
 import { Auth } from '../../services';
+import { Product } from '../../services';
 const data = [
     //just for designing
     { id: 1, txt: 'Entry 1' },
@@ -19,6 +21,26 @@ const data = [
     { id: 3, txt: 'Entry 3' },
 ];
 const Home = ({ navigation }) => {
+    const [products, setProducts] = useState();
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        Product.getProduct()
+        .then( prod => 
+            setProducts(prod),
+            
+            setLoading(false),
+            console.log(products)
+        )
+        .catch( err =>alert(err.code, err.message))
+    })
+
+    if(loading){
+        return <ActivityIndicator 
+                    color= {'red'}
+                    size= 'large'
+                />
+    }
     return (
         <SafeAreaView style={styles.mainView}>
             <View style={styles.headerView}>
@@ -32,7 +54,7 @@ const Home = ({ navigation }) => {
             </View>
             <View style={styles.entries}>
                 <FlatList
-                    data={data}
+                    data={products}
                     renderItem={({ item }) => (
                         <Card style={{ margin: 5 }}>
                             <View style={styles.card1}>
@@ -46,7 +68,7 @@ const Home = ({ navigation }) => {
                                     <TouchableOpacity
                                         style={{}}
                                         onPress={() => navigation.navigate('EditEntries')}>
-                                        <Text style={styles.entriesText}>{item.txt}</Text>
+                                        <Text style={styles.entriesText}>{item.name}</Text>
                                     </TouchableOpacity>
                                 </View>
                                 <View>

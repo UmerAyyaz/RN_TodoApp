@@ -5,6 +5,18 @@ import {
     GoogleSigninButton,
     statusCodes,
   } from '@react-native-google-signin/google-signin';
+  import firestore from '@react-native-firebase/firestore';
+
+
+  const createUserInDb = (uid, fullName, email) => {
+    return firestore().collection('users').doc(uid).set(
+        {
+            uid,
+            fullName,
+            email
+        }
+    )
+}
 
 
 // Google sign in
@@ -46,7 +58,7 @@ const facebookSignIn = async() => {
 // signup handling
 const signUp = (fullName, email, password) => {
     if(!fullName || !email || !password){
-        alert('Error', 'Please enter all fields')
+        Alert.alert('Error', 'Please enter all fields')
     }
 
     return auth().createUserWithEmailAndPassword(email, password)
@@ -61,7 +73,7 @@ const signUp = (fullName, email, password) => {
     })
     .then( uid => createUserInDb(uid, fullName, email))
     .catch(
-        err => alert(err.code, err.message)
+        err => Alert.alert(err.code, err.message)
     )
 }
 

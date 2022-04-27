@@ -12,12 +12,23 @@ import {
 } from 'react-native';
 import { Card } from 'react-native-paper';
 import styles from './AddEntries.style';
+import { Product } from '../../services';
 
 const AddEntries = ({ navigation }) => {
     const [name, setName] = useState()
     const [email, setEmail] = useState()
     const [currentProject, setcurrentProject] = useState()
     const [jobTitle, setjobTitle] = useState()
+
+    const _add = () => {
+        Product.addProduct(name,email,currentProject,jobTitle)
+        .then(
+                alert('Success', 'Product added')
+        )
+        .catch(
+            err =>alert(err.code, err.message)
+        )
+    }
 
     return (
         <SafeAreaView style={styles.mainView}>
@@ -73,7 +84,7 @@ const AddEntries = ({ navigation }) => {
                
                 <TouchableOpacity
                     style={styles.touchableStyle}
-                    onPress={() => navigation.navigate("Home")}>
+                    onPress={_add}>
                     <Text style={styles.addEntryButton}>Add Entry</Text>
                 </TouchableOpacity>
             </View>

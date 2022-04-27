@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">TodoApp</string>
-    <string name="facebook_app_id">399220915382504</string>
+    <string name="facebook_app_id">507469771112084</string>
+    <string name="fb_login_protocol_scheme">fb507469771112084</string>
+<string name="facebook_client_token">b49ca3a4e53ae02a5538ec54604fadd8</string>
 
 </resources>
